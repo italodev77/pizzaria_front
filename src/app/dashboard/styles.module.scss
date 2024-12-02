@@ -1,0 +1,113 @@
+/* Estilos gerais */
+.mainContainer {
+  background-color: var(--background-light);
+  display: flex;
+  height: 100vh; /* Vai ocupar toda a altura da tela */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar começa fora da tela */
+  width: 250px;
+  background-color: var(--dark-700);
+  color: var(--white);
+  height: 100vh;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid var(--gray-100);
+}
+
+.sidebar.open {
+  left: 0; /* Sidebar visível quando aberto */
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--red-900);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px 15px;
+  margin: 10px 0;
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  background: var(--dark-900);
+  transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: var(--red-900);
+}
+
+.toggleButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  color: var(--red-900);
+}
+
+/* Estilos do conteúdo principal */
+.mainContent {
+  flex: auto;
+  padding: 20px;
+  background: var(--background-light);
+  margin-left: -15%; /* Inicialmente sem margem */
+  transition: margin-left 0.3s ease; /* Suavizar a transição do deslocamento */
+}
+
+.mainContent.open {
+  margin-left: 250px; /* Desloca para a direita quando o sidebar está aberto */
+}
+
+.mainContent h1 {
+  font-size: 28px;
+  color: var(--red-900);
+}
+
+.mainContent p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--dark-700);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100vw;
+    left: -100%; /* Sidebar fora da tela em dispositivos móveis */
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .mainContent {
+    margin-left: 0; /* Sem margem em dispositivos móveis */
+  }
+}

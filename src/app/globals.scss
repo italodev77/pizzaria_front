@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+:root {
+  --white: #ffffff; /* Branco puro */
+  --dark-900: #2c2c2c; /* Preto escuro, mantendo o tom anterior */
+  --dark-700: #1c1c1c; /* Preto intermediário */
+  --gray-100: #8a8a8a; /* Cinza para textos */
+  --red-900: #ff0f0f; /* Vermelho vibrante estilo iFood */
+  --red-700: #d90404; /* Vermelho um pouco mais escuro */
+  --background-light: #f2f2f2; /* Branco gelo para áreas secundárias */
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-rendering: none;
+}
+
+body {
+  background-color: var(--dark-700);
+}
+body,
+input,
+textarea,
+select,
+button {
+  font: 400, 1rem sans-serif; //1rem = 16px
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%; //14px
+  }
+}
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; //15px
+  }
+}
