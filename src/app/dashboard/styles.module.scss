@@ -1,6 +1,6 @@
 /* Estilos gerais */
 .mainContainer {
-  background-color: var(--background-light);
+  background-color: var(--dark-1000);
   display: flex;
   height: 100vh; /* Vai ocupar toda a altura da tela */
 }
@@ -76,13 +76,13 @@
 .mainContent {
   flex: auto;
   padding: 20px;
-  background: var(--background-light);
-  margin-left: -15%; /* Inicialmente sem margem */
+  background: var(--dark-1000);
+  margin-left: -10%; /* Inicialmente sem margem */
   transition: margin-left 0.3s ease; /* Suavizar a transição do deslocamento */
 }
 
 .mainContent.open {
-  margin-left: 250px; /* Desloca para a direita quando o sidebar está aberto */
+  margin-left: 10%; /* Desloca para a direita quando o sidebar está aberto */
 }
 
 .mainContent h1 {

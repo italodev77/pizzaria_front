@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react"; // Para controlar o estado do sidebar
-import { Header } from "./components/header/header";
-import Sidebar from "./components/sidebar/sidebar"; // Importar o sidebar
+import { useState } from "react";
+import Sidebar from "./components/sidebar/sidebar";
 import styles from "./styles.module.scss";
 
 export default function DashboardLayout({
@@ -17,7 +16,6 @@ export default function DashboardLayout({
 
   return (
     <>
-      <Header />
       <div className={styles.mainContainer}>
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <main
