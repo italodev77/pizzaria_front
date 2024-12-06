@@ -1,0 +1,74 @@
+.container {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  h2 {
+    color: #ffff;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.input {
+  height: 45px;
+  border: 1px solid var(--dark-700);
+  padding: 0 16px;
+  border-radius: 8px;
+  background-color: var(--dark-700);
+  color: #ffff;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: all 0.5s;
+  width: 100%; /* Garante que o input ocupe toda a largura disponível */
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+/* Estilos para a lista de sugestões de produtos */
+.suggestions {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  background-color: var(--dark-700);
+  border-radius: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute; /* Faz com que as sugestões apareçam abaixo do input */
+  width: 100%; /* Para as sugestões ocuparem toda a largura do input */
+  z-index: 10; /* Para as sugestões ocuparem toda a largura do input */
+
+  li {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #fff;
+
+    /* Efeito de hover nas sugestões */
+    &:hover {
+      background-color: #ffff;
+    }
+  }
+}
+
+/* Estilo adicional para o container do campo de busca */
+.search-container {
+  position: relative;
+  width: 100%;
+}
