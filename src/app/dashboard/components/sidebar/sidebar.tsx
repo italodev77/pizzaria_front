@@ -19,7 +19,7 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
           <h2>Bem-vindo</h2>
           <nav>
             <a href="/dashboard">Dashboard</a>
-            <a href="/dashboard/pedidos">Pedidos</a>
+            <a href="/dashboard/pedido">Pedidos</a>
             <a href="/dashboard/product">Produtos</a>
             <a href="#">Clientes</a>
             <a href="/dashboard/category">Categorias</a>
